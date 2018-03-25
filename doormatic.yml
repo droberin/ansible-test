@@ -18,3 +18,18 @@ play.yml- hosts: raspberries
   - name: Install Joe Editor
     become: true
     apt: pkg=joe state=installed
+
+  - name: Install PHP and its needs
+    become: true
+    apt:
+      name:
+      - php5
+      - libapache2-mod-php5
+      - php5-mysql
+
+  - name: Install Apache2 and MySQL
+    become: true
+    apt:
+      name:
+      - apache2
+      - mysql-server
