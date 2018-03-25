@@ -1,4 +1,4 @@
-play.yml- hosts: raspberries
+- hosts: raspberries
   remote_user: pi
   tasks:
   - name: update APT cache if the last one is more than 3600 seconds old
